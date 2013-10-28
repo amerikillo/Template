@@ -8,15 +8,16 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Clases.*" %>
 <%
-    ConectionDB con = new ConectionDB();
-    Consultas cons = new Consultas();
-
+    ConectionDB con=new ConectionDB();
+    Consultas cons  = new Consultas();
+    
     con.conectar();
     ResultSet rset = con.consulta(cons.obtiene_unidades());
-    while (rset.next()) {
+    while (rset.next()){
+        
     }
     con.cierraConexion();
-%>
+    %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -75,14 +76,13 @@
             <h1>Plantilla de Proyectos!</h1>
             <!-- Los Botones tendran la siguiente forma -->
             <button class="btn" type="submit">Enviar</button>
-            <a href="genera.jsp">genera</a>
         </div>
 
         <div class="navbar navbar-default navbar-fixed-bottom">
             <div class="container">
-                <div class="text-center text-muted">
-                    Derechos Reservardos <span class="glyphicon glyphicon-registration-mark"></span>
-                </div>
+                    <div class="text-center text-muted">
+                        Derechos Reservardos <span class="glyphicon glyphicon-registration-mark"></span>
+                    </div>
             </div>
         </div>
     </body>
