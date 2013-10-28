@@ -15,7 +15,7 @@
     Class.forName("com.mysql.jdbc.Driver").newInstance();
     conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/receta_nay", "root", "eve9397");
     /*Establecemos la rutacon.getConn(); // del reporte*/
-    File reportFile = new File(application.getRealPath("reporte/report1.jasper"));
+    File reportFile = new File(application.getRealPath("reporte/reporte.jasper"));
     /* No enviamos parámetros porque nuestro reporte no los necesita asi que escriba 
      cualquier cadena de texto ya que solo seguiremos el formato del método runReportToPdf*/
     Map parameters = new HashMap();
