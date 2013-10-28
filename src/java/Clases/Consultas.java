@@ -17,5 +17,9 @@ public class Consultas {
         query = "select des_uni from unidades";
         return query;
     }
-
+    
+    public String total_juris(String juris){
+        query = "select sum(can_sur) from juris where juris = '"+juris+"'";
+        return query;
+    }
 }

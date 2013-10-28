@@ -4,7 +4,20 @@
     Author     : amerikillo
 --%>
 
+<%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Clases.*" %>
+<%
+    ConectionDB con=new ConectionDB();
+    Consultas cons  = new Consultas();
+    
+    con.conectar();
+    ResultSet rset = con.consulta(cons.obtiene_unidades());
+    while (rset.next()){
+        
+    }
+    con.cierraConexion();
+    %>
 <!DOCTYPE html>
 <html>
     <head>
