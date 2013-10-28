@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f37b45e6-d17d-4695-927b-6f81fcc1bf54">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     unidades.`cla_uni` AS unidades_cla_uni,
+     unidades.`des_uni` AS unidades_des_uni,
+     unidades.`cla_mun` AS unidades_cla_mun,
+     unidades.`tip_uni` AS unidades_tip_uni
+FROM
+     `unidades` unidades]]>
+	</queryString>
+	<field name="unidades_cla_uni" class="java.lang.String"/>
+	<field name="unidades_des_uni" class="java.lang.String"/>
+	<field name="unidades_cla_mun" class="java.lang.Integer"/>
+	<field name="unidades_tip_uni" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="2b2ff1e6-77b1-4bff-a002-35a0f39457a3" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[unidades_cla_uni]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="409793a3-cb00-4268-9483-dfbf35af4199" x="125" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[unidades_des_uni]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d426a68a-078c-4431-9fdf-474d49a00ee3" x="0" y="14" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{unidades_des_uni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="748c5d7d-ae1c-41a9-83c7-371b25fcafa4" x="125" y="14" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{unidades_cla_uni}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
